@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="credentials" (ngSubmit)="login()">
+
+    <ion-item fill="solid">
+      <ion-input type="email" placeholder="E-mail" formControlName="email"></ion-input>
+      <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Please insert your email</ion-note>
+    </ion-item>
+
+    <ion-item fill="solid">
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Min lengh: 6</ion-note>
+    </ion-item>
+
+    <ion-button type="submit" [disabled]="!credentials.valid">Login</ion-button>
+    <ion-button type="button" (click)="register()">Create account</ion-button>
+  </form>
+</ion-content>

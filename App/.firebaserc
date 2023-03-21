@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "app1-60f29": {
+      "hosting": {
+        "app": [
+          "app1-60f29"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "app1-60f29"
+  }
+}
